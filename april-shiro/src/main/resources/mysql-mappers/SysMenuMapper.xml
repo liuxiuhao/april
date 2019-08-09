@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pudding.april.shiro.mapper.SysMenuMapper">
+    <select id="selectListByUserId" resultType="com.pudding.april.shiro.entity.SysMenu">
+        SELECT a.* FROM sys_menu a where a.MENU_ID in(SELECT DISTINCT MENU_ID FROM               sys_role_menu b
+        LEFT JOIN sys_role c ON b.ROLE_ID = c.ROLE_ID
+        LEFT JOIN sys_user_role ur ON ur.ROLE_ID = c.ROLE_ID
+        where ur.user_id = #{userId} )
+    </select>
+</mapper>
