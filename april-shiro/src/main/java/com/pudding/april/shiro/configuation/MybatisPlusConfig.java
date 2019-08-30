@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @EnableTransactionManagement
 @Configuration
-@MapperScan("com.pudding.april.*.mapper*")
+@MapperScan("com.pudding.page.*.mapper*")
 public class MybatisPlusConfig {
 
     /**

@@ -22,7 +22,7 @@ public class QueryUserReq extends QueryReq implements Serializable {
     /**
      * 部门ID
      */
-    @ApiModelProperty(value = "部门ID")
+    @ApiModelProperty(value = "部门ID",example = "0")
     private Long deptId;
 
     /**

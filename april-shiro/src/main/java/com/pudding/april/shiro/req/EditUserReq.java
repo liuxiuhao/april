@@ -19,7 +19,7 @@ public class EditUserReq implements Serializable {
     /**
      * 用户名
      */
-    @ApiModelProperty(value = "用户名",notes = "修改必输")
+    @ApiModelProperty(value = "用户名",notes = "修改必输",example = "0")
     private Long userId;
     /**
      * 用户名

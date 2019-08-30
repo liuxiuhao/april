@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
+import java.io.Serializable;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,7 +17,7 @@ import java.util.Map;
  * @Description:
  */
 @SuppressWarnings("unchecked")
-public class APIResponse<T> {
+public class APIResponse<T> implements Serializable {
     private static final Logger logger = LoggerFactory.getLogger(APIResponse.class);
     public static final String NOT_INITIALIZED = "not-initialized";
     public static final String SUCCESS = "success";

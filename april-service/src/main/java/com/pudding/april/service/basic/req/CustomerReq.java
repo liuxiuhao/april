@@ -1,13 +1,17 @@
 package com.pudding.april.service.basic.req;
 
-import java.time.LocalDateTime;
+
+import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @Author: liuxh
  * @Date: 2019/8/6 09:12
  * @Description:
  */
-public class CustomerReq {
+@Data
+public class CustomerReq implements Serializable {
     /**
      * 客户编码
      */

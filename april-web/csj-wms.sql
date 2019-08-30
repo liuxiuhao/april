@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : 192.168.1.206(测试)
 Source Server Version : 50559
 Source Host           : 192.168.1.206:3306
-Source Database       : april
+Source Database       : page
 
 Target Server Type    : MYSQL
 Target Server Version : 50559

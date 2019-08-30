@@ -3,7 +3,6 @@ package com.pudding.april.service.basic;
 import com.pudding.april.dao.entity.BasicCustomer;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.pudding.april.service.basic.req.CustomerReq;
-import com.pudding.april.service.basic.req.CustomerReq;
 
 /**
  * <p>

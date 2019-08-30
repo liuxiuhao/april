@@ -6,14 +6,15 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.pudding.april.common.bean.APIResponse;
 import com.pudding.april.shiro.entity.SysMenu;
 import com.pudding.april.shiro.req.EditMenuReq;
-import com.pudding.april.shiro.req.EditUserReq;
-import com.pudding.april.shiro.req.QueryMenuReq;
+import com.pudding.april.shiro.resp.Tree;
 import com.pudding.april.shiro.service.ISysMenuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * <p>
@@ -38,21 +39,26 @@ public class MenuController {
     }
     @ApiOperation(value = "新增菜单",notes = "新增菜单")
     @PostMapping("/add")
-    public APIResponse addMenu(@RequestBody @ApiParam(value = "菜单操作对象")  EditMenuReq addMenuReq){
+    public APIResponse<String> addMenu(@RequestBody @ApiParam(value = "菜单操作对象")  EditMenuReq addMenuReq){
         sysMenuService.addMenu(addMenuReq);
         return APIResponse.success();
     }
     @ApiOperation(value = "修改菜单",notes = "修改菜单")
     @PostMapping("/update")
-    public APIResponse updateMenu(@RequestBody @ApiParam(value = "菜单操作对象") EditMenuReq updateMenuReq){
+    public APIResponse<String> updateMenu(@RequestBody @ApiParam(value = "菜单操作对象") EditMenuReq updateMenuReq){
         sysMenuService.updateMenu(updateMenuReq);
         return APIResponse.success();
     }
     @ApiOperation(value = "删除菜单",notes = "删除菜单")
     @GetMapping("/delete")
-    public APIResponse deleteMenu(@RequestParam("menuId") @ApiParam(value = "菜单Id") Long menuId){
+    public APIResponse<String> deleteMenu(@RequestParam("menuId") @ApiParam(value = "菜单Id") Long menuId){
         sysMenuService.deleteMenu(menuId);
         return APIResponse.success();
+    }
+    @ApiOperation(value = "获取菜单信息",notes = "获取菜单信息")
+    @GetMapping("/getMenusByUser")
+    public APIResponse<List<Tree<SysMenu>>> getMenusByUser(){
+        return APIResponse.success(sysMenuService.selectTreeByUser(null));
     }
 }
 

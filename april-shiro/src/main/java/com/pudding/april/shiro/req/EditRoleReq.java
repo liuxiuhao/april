@@ -11,18 +11,18 @@ import java.util.List;
 /**
  * @author liuxh
  * @Title: EditRoleReq
- * @ProjectName april
+ * @ProjectName page
  * @date 2019/08/08
  */
 @ApiModel(value = "角色操作对象",description = "角色操作对象")
 @Data
 public class EditRoleReq implements Serializable{
-    @ApiModelProperty(value = "用户id",notes = "用户id,修改时必输")
+    @ApiModelProperty(value = "用户id",notes = "用户id,修改时必输",example = "0")
     private Long roleId;
     /**
      * 角色名称
      */
-    @ApiModelProperty(value = "角色名称",notes = "角色名称必输",required = true)
+    @ApiModelProperty(value = "角色名称",notes = "角色名称必输",required = true,example = "0")
     @NotNull(message = "角色名称不能为空")
     private String roleName;
 

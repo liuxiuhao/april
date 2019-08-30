@@ -47,5 +47,5 @@ public interface ISysMenuService extends IService<SysMenu> {
      * 查询用户对应的菜单列表
      * @return
      */
-    Tree<SysMenu> selectTreeByUser(Long userId);
+    List<Tree<SysMenu>> selectTreeByUser(Long userId);
 }

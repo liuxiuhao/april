@@ -2,6 +2,7 @@ package com.pudding.april.shiro.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.google.common.collect.Lists;
 import com.pudding.april.common.exception.BusinessException;
 import com.pudding.april.shiro.entity.SysMenu;
 import com.pudding.april.shiro.entity.SysRoleMenu;
@@ -11,6 +12,7 @@ import com.pudding.april.shiro.req.EditMenuReq;
 import com.pudding.april.shiro.req.QueryMenuReq;
 import com.pudding.april.shiro.resp.Tree;
 import com.pudding.april.shiro.service.ISysMenuService;
+import com.pudding.april.shiro.utils.TreeUtils;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -91,7 +94,32 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     }
 
     @Override
-    public Tree<SysMenu> selectTreeByUser(Long userId) {
-        return null;
+    public List<Tree<SysMenu>> selectTreeByUser(Long userId) {
+        List<SysMenu> menus = baseMapper.selectList(new QueryWrapper<>());
+        ArrayList<Tree<SysMenu>> trees = Lists.newArrayList();
+        if (menus == null) {
+            return trees;
+        }
+        return TreeUtils.buildList(buildMenuTree(menus),"0");
+    }
+    /**
+     * 封装菜单树
+     * @param menus
+     * @return
+     */
+    private List<Tree<SysMenu>> buildMenuTree(List<SysMenu> menus) {
+        List<Tree<SysMenu>> trees = Lists.newArrayList();
+        menus.forEach(menu -> {
+            if (menu.getType().equals("0")){
+                Tree<SysMenu> tree = new Tree<>();
+                tree.setId(menu.getMenuId().toString());
+                tree.setParentId(menu.getParentId().toString());
+                tree.setText(menu.getMenuName());
+                tree.setIcon(menu.getIcon());
+                tree.setUrl(menu.getUrl());
+                trees.add(tree);
+            }
+        });
+        return trees;
     }
 }

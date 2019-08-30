@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * @author liuxh
  * @Title: 菜单操作对象
- * @ProjectName april
+ * @ProjectName page
  * @date 2019/08/08
  */
 @ApiModel(value = "菜单操作对象",description = "菜单操作对象")
@@ -21,13 +21,13 @@ public class EditMenuReq implements Serializable {
     /**
      * 菜单/按钮ID
      */
-    @ApiModelProperty(value = "菜单id",notes = "修改时必输")
+    @ApiModelProperty(value = "菜单id",notes = "修改时必输",example = "0")
     private Long menuId;
 
     /**
      * 上级菜单ID
      */
-    @ApiModelProperty(value = "上级菜单ID",notes = "上级菜单ID")
+    @ApiModelProperty(value = "上级菜单ID",notes = "上级菜单ID",example = "0")
     private Long parentId;
 
     /**
@@ -63,6 +63,6 @@ public class EditMenuReq implements Serializable {
     /**
      * 排序
      */
-    @ApiModelProperty(value = "排序",notes = "排序")
+    @ApiModelProperty(value = "排序",notes = "排序",example = "0")
     private Long orderNum;
 }
