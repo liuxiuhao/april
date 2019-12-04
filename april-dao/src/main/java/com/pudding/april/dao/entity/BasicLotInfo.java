@@ -2,6 +2,8 @@ package com.pudding.april.dao.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
@@ -13,6 +15,7 @@ import java.io.Serializable;
  * @author liuxh
  * @since 2019-08-05
  */
+@Data
 public class BasicLotInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -70,109 +73,4 @@ public class BasicLotInfo implements Serializable {
      */
     private Integer isDelete;
 
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getLotName() {
-        return lotName;
-    }
-
-    public void setLotName(String lotName) {
-        this.lotName = lotName;
-    }
-
-    public Integer getIsDefalut() {
-        return isDefalut;
-    }
-
-    public void setIsDefalut(Integer isDefalut) {
-        this.isDefalut = isDefalut;
-    }
-
-    public LocalDateTime getGmtCreate() {
-        return gmtCreate;
-    }
-
-    public void setGmtCreate(LocalDateTime gmtCreate) {
-        this.gmtCreate = gmtCreate;
-    }
-
-    public LocalDateTime getGmtModify() {
-        return gmtModify;
-    }
-
-    public void setGmtModify(LocalDateTime gmtModify) {
-        this.gmtModify = gmtModify;
-    }
-
-    public Integer getDataVersion() {
-        return dataVersion;
-    }
-
-    public void setDataVersion(Integer dataVersion) {
-        this.dataVersion = dataVersion;
-    }
-
-    public Integer getCreaterId() {
-        return createrId;
-    }
-
-    public void setCreaterId(Integer createrId) {
-        this.createrId = createrId;
-    }
-
-    public String getCreaterName() {
-        return createrName;
-    }
-
-    public void setCreaterName(String createrName) {
-        this.createrName = createrName;
-    }
-
-    public Integer getModifierId() {
-        return modifierId;
-    }
-
-    public void setModifierId(Integer modifierId) {
-        this.modifierId = modifierId;
-    }
-
-    public String getModifierName() {
-        return modifierName;
-    }
-
-    public void setModifierName(String modifierName) {
-        this.modifierName = modifierName;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    @Override
-    public String toString() {
-        return "BasicLotInfo{" +
-        "id=" + id +
-        ", lotName=" + lotName +
-        ", isDefalut=" + isDefalut +
-        ", gmtCreate=" + gmtCreate +
-        ", gmtModify=" + gmtModify +
-        ", dataVersion=" + dataVersion +
-        ", createrId=" + createrId +
-        ", createrName=" + createrName +
-        ", modifierId=" + modifierId +
-        ", modifierName=" + modifierName +
-        ", isDelete=" + isDelete +
-        "}";
-    }
 }

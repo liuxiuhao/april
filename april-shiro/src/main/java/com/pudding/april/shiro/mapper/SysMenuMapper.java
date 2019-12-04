@@ -1,6 +1,5 @@
 package com.pudding.april.shiro.mapper;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.pudding.april.shiro.entity.SysMenu;
 import org.apache.ibatis.annotations.Param;

@@ -2,6 +2,8 @@ package com.pudding.april.dao.entity;
 
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -12,6 +14,7 @@ import java.io.Serializable;
  * @author liuxh
  * @since 2019-08-05
  */
+@Data
 public class OutWarehouseJob implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -111,180 +114,4 @@ public class OutWarehouseJob implements Serializable {
     private Integer isDelete;
 
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getPickOrderCode() {
-        return pickOrderCode;
-    }
-
-    public void setPickOrderCode(String pickOrderCode) {
-        this.pickOrderCode = pickOrderCode;
-    }
-
-    public String getWarehouseCode() {
-        return warehouseCode;
-    }
-
-    public void setWarehouseCode(String warehouseCode) {
-        this.warehouseCode = warehouseCode;
-    }
-
-    public String getsWarehouseAreaCode() {
-        return sWarehouseAreaCode;
-    }
-
-    public void setsWarehouseAreaCode(String sWarehouseAreaCode) {
-        this.sWarehouseAreaCode = sWarehouseAreaCode;
-    }
-
-    public String getsWarehouseSpaceCode() {
-        return sWarehouseSpaceCode;
-    }
-
-    public void setsWarehouseSpaceCode(String sWarehouseSpaceCode) {
-        this.sWarehouseSpaceCode = sWarehouseSpaceCode;
-    }
-
-    public String gettWarehouseAreaCode() {
-        return tWarehouseAreaCode;
-    }
-
-    public void settWarehouseAreaCode(String tWarehouseAreaCode) {
-        this.tWarehouseAreaCode = tWarehouseAreaCode;
-    }
-
-    public String gettWarehouseSpaceCode() {
-        return tWarehouseSpaceCode;
-    }
-
-    public void settWarehouseSpaceCode(String tWarehouseSpaceCode) {
-        this.tWarehouseSpaceCode = tWarehouseSpaceCode;
-    }
-
-    public Integer getStockId() {
-        return stockId;
-    }
-
-    public void setStockId(Integer stockId) {
-        this.stockId = stockId;
-    }
-
-    public String getTrayCode() {
-        return trayCode;
-    }
-
-    public void setTrayCode(String trayCode) {
-        this.trayCode = trayCode;
-    }
-
-    public Integer getJobStatus() {
-        return jobStatus;
-    }
-
-    public void setJobStatus(Integer jobStatus) {
-        this.jobStatus = jobStatus;
-    }
-
-    public String getRemarkInfo() {
-        return remarkInfo;
-    }
-
-    public void setRemarkInfo(String remarkInfo) {
-        this.remarkInfo = remarkInfo;
-    }
-
-    public LocalDateTime getGmtCreate() {
-        return gmtCreate;
-    }
-
-    public void setGmtCreate(LocalDateTime gmtCreate) {
-        this.gmtCreate = gmtCreate;
-    }
-
-    public LocalDateTime getGmtModify() {
-        return gmtModify;
-    }
-
-    public void setGmtModify(LocalDateTime gmtModify) {
-        this.gmtModify = gmtModify;
-    }
-
-    public Integer getDataVersion() {
-        return dataVersion;
-    }
-
-    public void setDataVersion(Integer dataVersion) {
-        this.dataVersion = dataVersion;
-    }
-
-    public Integer getCreaterId() {
-        return createrId;
-    }
-
-    public void setCreaterId(Integer createrId) {
-        this.createrId = createrId;
-    }
-
-    public String getCreaterName() {
-        return createrName;
-    }
-
-    public void setCreaterName(String createrName) {
-        this.createrName = createrName;
-    }
-
-    public Integer getModifierId() {
-        return modifierId;
-    }
-
-    public void setModifierId(Integer modifierId) {
-        this.modifierId = modifierId;
-    }
-
-    public String getModifierName() {
-        return modifierName;
-    }
-
-    public void setModifierName(String modifierName) {
-        this.modifierName = modifierName;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    @Override
-    public String toString() {
-        return "OutWarehouseJob{" +
-        "id=" + id +
-        ", pickOrderCode=" + pickOrderCode +
-        ", warehouseCode=" + warehouseCode +
-        ", sWarehouseAreaCode=" + sWarehouseAreaCode +
-        ", sWarehouseSpaceCode=" + sWarehouseSpaceCode +
-        ", tWarehouseAreaCode=" + tWarehouseAreaCode +
-        ", tWarehouseSpaceCode=" + tWarehouseSpaceCode +
-        ", stockId=" + stockId +
-        ", trayCode=" + trayCode +
-        ", jobStatus=" + jobStatus +
-        ", remarkInfo=" + remarkInfo +
-        ", gmtCreate=" + gmtCreate +
-        ", gmtModify=" + gmtModify +
-        ", dataVersion=" + dataVersion +
-        ", createrId=" + createrId +
-        ", createrName=" + createrName +
-        ", modifierId=" + modifierId +
-        ", modifierName=" + modifierName +
-        ", isDelete=" + isDelete +
-        "}";
-    }
 }

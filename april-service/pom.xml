@@ -15,6 +15,10 @@
             <groupId>com.pudding.april</groupId>
             <artifactId>april-dao</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.pudding.april</groupId>
+            <artifactId>april-common</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

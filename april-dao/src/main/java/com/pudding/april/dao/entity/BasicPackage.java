@@ -3,6 +3,8 @@ package com.pudding.april.dao.entity;
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
@@ -14,6 +16,7 @@ import java.io.Serializable;
  * @author liuxh
  * @since 2019-08-05
  */
+@Data
 public class BasicPackage implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -109,169 +112,5 @@ public class BasicPackage implements Serializable {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getPackageCode() {
-        return packageCode;
-    }
-
-    public void setPackageCode(String packageCode) {
-        this.packageCode = packageCode;
-    }
-
-    public String getPackageDesc() {
-        return packageDesc;
-    }
-
-    public void setPackageDesc(String packageDesc) {
-        this.packageDesc = packageDesc;
-    }
-
-    public BigDecimal getSingle() {
-        return single;
-    }
-
-    public void setSingle(BigDecimal single) {
-        this.single = single;
-    }
-
-    public BigDecimal getBox() {
-        return box;
-    }
-
-    public void setBox(BigDecimal box) {
-        this.box = box;
-    }
-
-    public BigDecimal getPalet() {
-        return palet;
-    }
-
-    public void setPalet(BigDecimal palet) {
-        this.palet = palet;
-    }
-
-    public BigDecimal getWeight() {
-        return weight;
-    }
-
-    public void setWeight(BigDecimal weight) {
-        this.weight = weight;
-    }
-
-    public BigDecimal getLength() {
-        return length;
-    }
-
-    public void setLength(BigDecimal length) {
-        this.length = length;
-    }
-
-    public BigDecimal getWidth() {
-        return width;
-    }
-
-    public void setWidth(BigDecimal width) {
-        this.width = width;
-    }
-
-    public BigDecimal getHeight() {
-        return height;
-    }
-
-    public void setHeight(BigDecimal height) {
-        this.height = height;
-    }
-
-    public LocalDateTime getGmtCreate() {
-        return gmtCreate;
-    }
-
-    public void setGmtCreate(LocalDateTime gmtCreate) {
-        this.gmtCreate = gmtCreate;
-    }
-
-    public LocalDateTime getGmtModify() {
-        return gmtModify;
-    }
-
-    public void setGmtModify(LocalDateTime gmtModify) {
-        this.gmtModify = gmtModify;
-    }
-
-    public Integer getDataVersion() {
-        return dataVersion;
-    }
-
-    public void setDataVersion(Integer dataVersion) {
-        this.dataVersion = dataVersion;
-    }
-
-    public Integer getCreaterId() {
-        return createrId;
-    }
-
-    public void setCreaterId(Integer createrId) {
-        this.createrId = createrId;
-    }
-
-    public String getCreaterName() {
-        return createrName;
-    }
-
-    public void setCreaterName(String createrName) {
-        this.createrName = createrName;
-    }
-
-    public Integer getModifierId() {
-        return modifierId;
-    }
-
-    public void setModifierId(Integer modifierId) {
-        this.modifierId = modifierId;
-    }
-
-    public String getModifierName() {
-        return modifierName;
-    }
-
-    public void setModifierName(String modifierName) {
-        this.modifierName = modifierName;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    @Override
-    public String toString() {
-        return "BasicPackage{" +
-        "id=" + id +
-        ", packageCode=" + packageCode +
-        ", packageDesc=" + packageDesc +
-        ", single=" + single +
-        ", box=" + box +
-        ", palet=" + palet +
-        ", weight=" + weight +
-        ", length=" + length +
-        ", width=" + width +
-        ", height=" + height +
-        ", gmtCreate=" + gmtCreate +
-        ", gmtModify=" + gmtModify +
-        ", dataVersion=" + dataVersion +
-        ", createrId=" + createrId +
-        ", createrName=" + createrName +
-        ", modifierId=" + modifierId +
-        ", modifierName=" + modifierName +
-        ", isDelete=" + isDelete +
-        "}";
     }
 }

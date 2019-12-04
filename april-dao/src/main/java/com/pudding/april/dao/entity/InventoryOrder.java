@@ -2,6 +2,8 @@ package com.pudding.april.dao.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
@@ -13,6 +15,7 @@ import java.io.Serializable;
  * @author liuxh
  * @since 2019-08-05
  */
+@Data
 public class InventoryOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -85,126 +88,5 @@ public class InventoryOrder implements Serializable {
     private Integer inventoryName;
 
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getWarehouseCode() {
-        return warehouseCode;
-    }
-
-    public void setWarehouseCode(String warehouseCode) {
-        this.warehouseCode = warehouseCode;
-    }
-
-    public String getOrderCode() {
-        return orderCode;
-    }
-
-    public void setOrderCode(String orderCode) {
-        this.orderCode = orderCode;
-    }
-
-    public Integer getExecuteStatus() {
-        return executeStatus;
-    }
-
-    public void setExecuteStatus(Integer executeStatus) {
-        this.executeStatus = executeStatus;
-    }
-
-    public String getCreaterName() {
-        return createrName;
-    }
-
-    public void setCreaterName(String createrName) {
-        this.createrName = createrName;
-    }
-
-    public LocalDateTime getGmtCreate() {
-        return gmtCreate;
-    }
-
-    public void setGmtCreate(LocalDateTime gmtCreate) {
-        this.gmtCreate = gmtCreate;
-    }
-
-    public LocalDateTime getGmtModify() {
-        return gmtModify;
-    }
-
-    public void setGmtModify(LocalDateTime gmtModify) {
-        this.gmtModify = gmtModify;
-    }
-
-    public Integer getDataVersion() {
-        return dataVersion;
-    }
-
-    public void setDataVersion(Integer dataVersion) {
-        this.dataVersion = dataVersion;
-    }
-
-    public Integer getCreaterId() {
-        return createrId;
-    }
-
-    public void setCreaterId(Integer createrId) {
-        this.createrId = createrId;
-    }
-
-    public Integer getModifierId() {
-        return modifierId;
-    }
-
-    public void setModifierId(Integer modifierId) {
-        this.modifierId = modifierId;
-    }
-
-    public String getModifierName() {
-        return modifierName;
-    }
-
-    public void setModifierName(String modifierName) {
-        this.modifierName = modifierName;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    public Integer getInventoryName() {
-        return inventoryName;
-    }
-
-    public void setInventoryName(Integer inventoryName) {
-        this.inventoryName = inventoryName;
-    }
-
-    @Override
-    public String toString() {
-        return "InventoryOrder{" +
-        "id=" + id +
-        ", warehouseCode=" + warehouseCode +
-        ", orderCode=" + orderCode +
-        ", executeStatus=" + executeStatus +
-        ", createrName=" + createrName +
-        ", gmtCreate=" + gmtCreate +
-        ", gmtModify=" + gmtModify +
-        ", dataVersion=" + dataVersion +
-        ", createrId=" + createrId +
-        ", modifierId=" + modifierId +
-        ", modifierName=" + modifierName +
-        ", isDelete=" + isDelete +
-        ", inventoryName=" + inventoryName +
-        "}";
-    }
 }

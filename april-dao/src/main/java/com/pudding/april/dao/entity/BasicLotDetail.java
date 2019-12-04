@@ -1,5 +1,7 @@
 package com.pudding.april.dao.entity;
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
@@ -11,6 +13,7 @@ import java.io.Serializable;
  * @author liuxh
  * @since 2019-08-05
  */
+@Data
 public class BasicLotDetail implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -99,162 +102,5 @@ public class BasicLotDetail implements Serializable {
     private Integer isDelete;
 
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getLotId() {
-        return lotId;
-    }
-
-    public void setLotId(Integer lotId) {
-        this.lotId = lotId;
-    }
-
-    public String getLotAttrCode() {
-        return lotAttrCode;
-    }
-
-    public void setLotAttrCode(String lotAttrCode) {
-        this.lotAttrCode = lotAttrCode;
-    }
-
-    public String getLotAttrName() {
-        return lotAttrName;
-    }
-
-    public void setLotAttrName(String lotAttrName) {
-        this.lotAttrName = lotAttrName;
-    }
-
-    public Integer getInputType() {
-        return inputType;
-    }
-
-    public void setInputType(Integer inputType) {
-        this.inputType = inputType;
-    }
-
-    public Integer getLotAttrType() {
-        return lotAttrType;
-    }
-
-    public void setLotAttrType(Integer lotAttrType) {
-        this.lotAttrType = lotAttrType;
-    }
-
-    public String getLotAttrValue() {
-        return lotAttrValue;
-    }
-
-    public void setLotAttrValue(String lotAttrValue) {
-        this.lotAttrValue = lotAttrValue;
-    }
-
-    public Integer getIsBatch() {
-        return isBatch;
-    }
-
-    public void setIsBatch(Integer isBatch) {
-        this.isBatch = isBatch;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public LocalDateTime getGmtCreate() {
-        return gmtCreate;
-    }
-
-    public void setGmtCreate(LocalDateTime gmtCreate) {
-        this.gmtCreate = gmtCreate;
-    }
-
-    public LocalDateTime getGmtModify() {
-        return gmtModify;
-    }
-
-    public void setGmtModify(LocalDateTime gmtModify) {
-        this.gmtModify = gmtModify;
-    }
-
-    public Integer getDataVersion() {
-        return dataVersion;
-    }
-
-    public void setDataVersion(Integer dataVersion) {
-        this.dataVersion = dataVersion;
-    }
-
-    public Integer getCreaterId() {
-        return createrId;
-    }
-
-    public void setCreaterId(Integer createrId) {
-        this.createrId = createrId;
-    }
-
-    public String getCreaterName() {
-        return createrName;
-    }
-
-    public void setCreaterName(String createrName) {
-        this.createrName = createrName;
-    }
-
-    public Integer getModifierId() {
-        return modifierId;
-    }
-
-    public void setModifierId(Integer modifierId) {
-        this.modifierId = modifierId;
-    }
-
-    public String getModifierName() {
-        return modifierName;
-    }
-
-    public void setModifierName(String modifierName) {
-        this.modifierName = modifierName;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    @Override
-    public String toString() {
-        return "BasicLotDetail{" +
-        "id=" + id +
-        ", lotId=" + lotId +
-        ", lotAttrCode=" + lotAttrCode +
-        ", lotAttrName=" + lotAttrName +
-        ", inputType=" + inputType +
-        ", lotAttrType=" + lotAttrType +
-        ", lotAttrValue=" + lotAttrValue +
-        ", isBatch=" + isBatch +
-        ", remark=" + remark +
-        ", gmtCreate=" + gmtCreate +
-        ", gmtModify=" + gmtModify +
-        ", dataVersion=" + dataVersion +
-        ", createrId=" + createrId +
-        ", createrName=" + createrName +
-        ", modifierId=" + modifierId +
-        ", modifierName=" + modifierName +
-        ", isDelete=" + isDelete +
-        "}";
-    }
 }

@@ -22,13 +22,13 @@ import java.util.Map;
  */
 @Configuration
 public class ShiroConfiguration {
-    @Value("${shiro.redis.host}")
+    @Value("${spring.redis.host}")
     String redisHost;
-    @Value("${shiro.redis.port}")
+    @Value("${spring.redis.port}")
     String redisPort;
-    @Value("${shiro.redis.password}")
+    @Value("${spring.redis.password}")
     String redisPwd;
-    @Value("${shiro.redis.dbNumber}")
+    @Value("${spring.redis.database}")
     Integer dbNum;
     @Bean
     public ShiroRealm ratelShiroRealm() {
